@@ -72,5 +72,3 @@ abstract class Producto {
     // Método abstracto
     public abstract void mostrarInformacion();
 }
-
-

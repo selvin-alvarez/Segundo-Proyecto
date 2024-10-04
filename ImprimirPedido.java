@@ -15,11 +15,11 @@ class ImprimirPedido {
 	public static void imprimir() {
 	    Gson gson = new Gson();
 	    try (FileReader reader = new FileReader(FILE_PATH)) {
-	        Type productoListType = new TypeToken<List<Producto>>() {}.getType();
-	        List<Producto> productos = gson.fromJson(reader, productoListType);
+	        Type productoListType = new TypeToken<List<ProductoConcreto>>() {}.getType();
+	        List<ProductoConcreto> productos = gson.fromJson(reader, productoListType);
 
 	        if (productos != null) {
-	            for (Producto producto : productos) {
+	            for (ProductoConcreto producto : productos) {
 	                if (producto != null) {
 	                    System.out.println("Nombre: " + producto.getNombre());
 	                    System.out.println("Id: " + producto.getId());
